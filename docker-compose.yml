@@ -1,0 +1,27 @@
+version: '3'
+
+volumes:
+#  so1-var:
+#  so1-etc:
+
+services:
+  jwtapi:
+    build: .
+    ports:
+    - "5002:80"
+    - "5003:443"
+    depends_on:
+ #   - splunk
+    restart: on-failure
+  #splunk:
+  #  image: splunk/splunk:latest
+  #  environment:
+  #    - SPLUNK_START_ARGS=--accept-license
+  #    - SPLUNK_PASSWORD=Testing1
+  #    - DEBUG=true
+  #  ports:
+  #    - "8000:8000"
+  #    - "8088:8088"
+  #  volumes:
+  #    - so1-var:/opt/splunk/var      
+  #    - so1-etc:/opt/splunk/etc
