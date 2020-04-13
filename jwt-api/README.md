@@ -11,10 +11,9 @@ The Dockerfile has a dependency on a file called appsettings.Deploy.json and won
 ### Running Locally
 **Note**: If using Docker Desktop for Windows, make sure you are pointing to Linux Containers.
 ```
-git clone https://github.com/beesona/ncache-dotnet.git
-cd ncache-dotnet
+git clone https://github.com/beesona/jwt-api.git
+cd jwt-api
 dotnet restore
-docker container run --name=redis-1 -p 6379:6379 redis
 dotnet run
 ```
 - Navigate to https://localhost:5001 to access the page.
@@ -38,11 +37,9 @@ docker-compose up
 ```
 
 ### Using the application
-There are two endpoints (currently) available for caching data.
-1. /cache/{key}?={value}
-  - use this endpoint to get account demographic data.
-  - Example: **http://localhost:5000/cache/foo?value=bar**
-    - Calling **http://localhost:5000/cache/foo** after setting will return **bar**.
-2. /fromurl/{uriEncodedUrl}
-  - use this endpoint to cache and return any data serialized from the provided URL.
-  - Example: **http://localhost:5000/cache/fromurl/http%3A%2F%2Fdev.intsvc.nelnet.net%2FHistoryNote%2Fapi%2Fv1%2Fhistorynotes%2F99%2F1%2F003823158%2Fabeeson%3FrequestId%3D5302fe94-7596-41f6-84a8-2977f5c3eecf**
+There is one endpoint (currently) available for validating a user.
+1. /api/user/authenticate
+  - use this endpoint to get a JWT by passing in a valid user name and PW in the body of a POST request
+  - The body must be JSON, refer to the AuthenticateModel.cs for the format
+  - Sample users are stored in the application.json file.
+  - Sharing the secret between this app and other APIs and utilizing Microsoft.AspNetCore.Authentication.JwtBearer will allow apps to share a JWT.
