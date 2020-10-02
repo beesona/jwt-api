@@ -1,4 +1,4 @@
-﻿namespace jwt_api.Helpers
+﻿namespace jwtApi.Helpers
 {
     public class AppSettings
     {

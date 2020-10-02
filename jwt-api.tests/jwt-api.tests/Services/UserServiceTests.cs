@@ -1,6 +1,6 @@
 using Xunit;
-using jwt_api.Services;
-using jwt_api.Entities;
+using jwtApi.Services;
+using jwtApi.Entities;
 using Moq;
 
 namespace jwt_api.Tests

@@ -6,10 +6,10 @@ using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using jwt_api.Entities;
-using jwt_api.Helpers;
+using jwtApi.Entities;
+using jwtApi.Helpers;
 
-namespace jwt_api.Services
+namespace jwtApi.Services
 {
     public interface IUserService
     {

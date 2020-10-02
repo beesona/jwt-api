@@ -17,7 +17,7 @@
             "ASPNETCORE_ENVIRONMENT": "Development"
         }
     },
-    "ncahe_dotnet": {
+    "jwtApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "/",

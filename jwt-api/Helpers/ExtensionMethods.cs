@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using jwt_api.Entities;
+using jwtApi.Entities;
 
-namespace jwt_api.Helpers
+namespace jwtApi.Helpers
 {
     public static class ExtensionMethods
     {

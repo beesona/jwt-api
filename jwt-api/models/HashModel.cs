@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace jwt_api.models{
+namespace jwtApi.models{
     public class HashModel
     {
         public HashModel()

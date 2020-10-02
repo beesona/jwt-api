@@ -16,11 +16,11 @@ using NLog.Extensions.Logging;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using jwt_api.Services;
-using jwt_api.Helpers;
-using jwt_api.Entities;
+using jwtApi.Services;
+using jwtApi.Helpers;
+using jwtApi.Entities;
 
-namespace ncahe_dotnet
+namespace jwtApi
 {
     public class Startup
     {
